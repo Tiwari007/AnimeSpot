@@ -1,0 +1,19 @@
+.exploreBtn {
+  background: #fff;
+  color: #f76c8a;
+  border: none;
+  border: 1px solid #f76c8a;
+  border-radius: 28px;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  width: 250px;
+  text-align: center;
+}
+
+.exploreBtn:hover {
+  background: #ffe0ea;
+  color: #d94f6d;
+}

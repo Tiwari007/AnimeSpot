@@ -1,0 +1,98 @@
+/* Add to your CSS or SCSS file */
+
+.animeSuggestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  background: #ffe0ea9a;
+  border-radius: 32px;
+  margin: 3rem auto;
+  max-width: 80%;
+}
+
+.animeSuggestion h1 {
+  color: #f76c8a;
+  font-size: 3rem;
+  font-family: 'Risque', sans-serif;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.animeSuggestionForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.animeSuggestionForm label {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.animeSuggestionForm input[type="text"] {
+  padding: 1.2rem 2rem;
+  border-radius: 16px;
+  border: 2px solid #f76c8a;
+  font-size: 1.5rem;
+  outline: none;
+  min-width: 350px;
+  max-width: 100%;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(247, 108, 138, 0.08);
+  padding: 10px;
+  margin-top: 2rem;
+}
+
+.animeSuggestionForm input[type="text"]:focus {
+  border-color: #d94f6d;
+  background: #fff0f6;
+  box-shadow: 0 4px 16px rgba(247, 108, 138, 0.15);
+}
+
+.animeSuggestionForm .exploreBtn {
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+  border-radius: 28px;
+  border: none;
+  background: #f76c8a;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.8rem;
+}
+
+.animeSuggestionForm .exploreBtn:hover {
+  background: #d94f6d;
+}
+
+@media (max-width: 700px) {
+  .animeSuggestion {
+    padding: 2rem 0.8rem;
+    max-width: 98vw;
+  }
+  .animeSuggestion h1 {
+    font-size: 1.6rem;
+  }
+  .animeSuggestionForm input[type="text"] {
+    min-width: 90vw;
+    font-size: 1.1rem;
+  }
+  .animeSuggestionForm .exploreBtn {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+    .animeSuggestionForm label {
+      font-size: 1.5rem;
+    }
+}

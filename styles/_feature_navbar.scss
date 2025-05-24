@@ -1,0 +1,124 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 48px 0 48px;
+  background: #f76c8a;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.brand {
+  margin-left: 8px;
+  font-size: 1.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.links a:hover {
+  opacity: 0.7;
+}
+
+.faqBtn {
+  background: #ffffff;
+  padding: 8px 24px;
+  border-radius: 24px;
+  font-weight: bold;
+  margin-left: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.links a.faqBtn {
+  color: #000000;
+}
+
+.faqBtn:hover {
+  background: #ffe0ea;
+  color: #000000;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 16px;
+  top: 24px;
+  z-index: 3;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  transition: right 0.3s;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    justify-content: center;
+    padding: 16px 8px 0 8px;
+  }
+  .logo {
+    position: static;
+    left: unset;
+    transform: none;
+    margin: 0 auto;
+  }
+  .hamburger {
+    display: flex;
+    z-index: 20;
+    position: fixed;
+  }
+  .links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: #f76c8a;
+    padding-top: 80px;
+    gap: 32px;
+    align-items: flex-start;
+    z-index: 10;
+    transition: right 0.3s;
+  }
+  .links.open {
+    right: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
