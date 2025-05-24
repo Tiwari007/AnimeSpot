@@ -86,6 +86,10 @@
   color: #fff;
 }
 
+.anime-card-back .anime-list-source-btn{
+    margin: 0;
+}
+
 @media (max-width: 600px) {
   .anime-list-item {
     flex-direction: column;

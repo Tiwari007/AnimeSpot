@@ -1,14 +1,13 @@
 import Image from 'next/image';
-import animeData from '../../sampleData/animeData';
-import animeList from '../../sampleData/animeList';
+import animeMoviesList from '../../sampleData/animeMoviesList';
 
 export default function AnimePage() {
   return (
     <>
       <section className="anime-section">
-        <h1 className="anime-title">My Best Top 3 Anime</h1>
+        <h1 className="anime-title">My Best Top 3 Anime Movies</h1>
         <div className="anime-list">
-          {animeData.map((anime: { title: string; description: string; image: string, sourceUrl: string }) => (
+          {animeMoviesList.map((anime: { title: string; description: string; image: string, sourceUrl: string }) => (
             <div className="anime-card-flip" key={anime.title}>
               <div className="anime-card-inner">
                 <div className="anime-card-front">
@@ -39,8 +38,8 @@ export default function AnimePage() {
           ))}
         </div>
       </section>
-      <section className="anime-section">
-        <h1 className="anime-title">Some of my favourite Anime</h1>
+      {/* <section className="anime-section">
+        <h1 className="anime-title">Some of my favourite anime Movies</h1>
         <ul className="anime-list-view">
           {animeList.map((anime, idx) => (
             <li className="anime-list-item" key={anime.title}>
@@ -67,7 +66,7 @@ export default function AnimePage() {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </>
   );
 }
