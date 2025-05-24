@@ -16,21 +16,24 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 🌸 Anime Hub
+Anime Hub is a personal anime website built to showcase a curated list of my favorite anime along with popular titles. It also features a community-driven suggestion system where users can recommend anime and share the reasons behind their picks. Whether you're a seasoned otaku or new to anime, this site helps you explore, discover, and share great shows!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+# 🔥 Features
+## 🎌 Favorite Anime: A collection of anime that I personally love and recommend.
+## 📈 Popular Anime: Highlighting trending and top-rated anime titles.
+## 💬 User Suggestions: Users can suggest their favorite anime and explain why it's worth watching.
+## 💡 Community Picks: Discover hidden gems and underrated shows through other users’ recommendations.
 
-To learn more about Next.js, take a look at the following resources:
+# 🚀 Tech Stack
+### Frontend: React.js / Next.js (customize based on your stack)
+### Styling: CSS / Tailwind / Styled Components (mention what you used)
+### Backend (if any): Node.js / Firebase / etc. (include if applicable)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 🤝 Contributions
+Got a favorite anime you think everyone should know about? Feel free to contribute or suggest improvements. Open an issue or submit a pull request!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 📫 Feedback
+If you have suggestions or feedback, drop them in the Issues section or connect with me directly.
