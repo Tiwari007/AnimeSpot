@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className={`links${open ? ' open' : ''}`} onClick={() => setOpen(false)}>
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
-        <Link href="/anime">Anime</Link>
+        <Link href="/favouriteanime">Anime</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/faq" className="faqBtn">FAQ</Link>
       </div>

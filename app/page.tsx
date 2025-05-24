@@ -12,14 +12,14 @@ export default function HomePage() {
           Immerse yourself in the captivating narratives and vibrant visuals of the anime universe.
           Explore a diverse range of genres, from action-packed adventures to heartwarming stories
         </p>
-        { features.showPopularAnime && (
-          <Link href="/anime" className="exploreBtn">
-            Explore Popular Anime
-          </Link>
-        )}
         { features.showFavouriteAnime && (
           <Link href="/favouriteanime" className="exploreBtn">
             My Favourite Anime
+          </Link>
+        )}
+        { features.showPopularAnime && (
+          <Link href="/anime" className="exploreBtn">
+            Explore Popular Anime
           </Link>
         )}
       </div>
