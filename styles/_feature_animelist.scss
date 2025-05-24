@@ -1,0 +1,106 @@
+.anime-list-view {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.anime-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #ffe0ea;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(247, 108, 138, 0.06);
+}
+
+.anime-list-index {
+  font-size: 1.3rem;
+  color: #f76c8a;
+  font-weight: bold;
+  width: 2rem;
+  text-align: right;
+}
+
+.anime-list-img {
+  border-radius: 10px;
+  object-fit: cover;
+  background: #fff;
+  width: 60px;
+  height: 80px;
+}
+
+.anime-list-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.anime-list-title {
+  font-size: 1.2rem;
+  color: #f76c8a;
+  font-weight: bold;
+  font-family: 'Risque', sans-serif;
+}
+
+.anime-list-desc {
+  color: #333;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+
+
+.anime-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #ffe0ea;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(247, 108, 138, 0.06);
+  position: relative;
+}
+
+.anime-list-source-btn {
+  margin-left: auto;
+  background: #f76c8a;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(247, 108, 138, 0.10);
+  white-space: nowrap;
+}
+
+.anime-list-source-btn:hover {
+  background: #d94f6d;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .anime-list-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem;
+  }
+//   .anime-list-img,
+  .anime-list-index,
+  .anime-list-desc {
+    display: none !important;
+  }
+  .anime-list-source-btn {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
