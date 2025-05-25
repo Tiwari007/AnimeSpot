@@ -18,7 +18,7 @@ export default function HomePage() {
           </Link>
         )}
         { features.showFavouriteAnimeMovies && (
-          <Link href="/favouriteanime" className="exploreBtn">
+          <Link href="/movies" className="exploreBtn">
             My Favourite Anime Movies
           </Link>
         )}
