@@ -1,57 +1,24 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
-
-type AnimeMovie = {
-  title: string;
-  description: string;
-  image: string;
-  sourceUrl: string;
-};
+import { useAppDispatch, useAppSelector } from "../../lib/hooks";
+import { fetchAnimeMovies } from "../../lib/features/animeSlice";
 
 export default function AnimePage() {
-  const [animeMoviesList, setAnimeMoviesList] = useState<AnimeMovie[]>([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useAppDispatch();
+  const { animeMovies, loading, error } = useAppSelector((state) => state.anime);
 
   useEffect(() => {
-    fetch("https://animespot-backend.onrender.com/anime/animemoviesdata")
-      .then((res) => res.json())
-      .then((data) => setAnimeMoviesList(data))
-      .catch(() => setAnimeMoviesList([]))
-      .finally(() => setLoading(false));
-  }, []);
-
+    dispatch(fetchAnimeMovies());
+  }, [dispatch]);
   if (loading) {
+    return <div style={{ textAlign: "center", margin: "2rem" }}>Loading...</div>;
+  }
+
+  if (error) {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          minHeight: "80vh",
-        }}
-      >
-        <div
-          style={{
-            border: "6px solid #f3f3f3",
-            borderTop: "6px solid #3498db",
-            borderRadius: "50%",
-            width: "48px",
-            height: "48px",
-            animation: "spin 1s linear infinite",
-            marginBottom: "1rem",
-          }}
-        />
-        <style>
-          {`
-            @keyframes spin {
-              0% { transform: rotate(0deg); }
-              100% { transform: rotate(360deg); }
-            }
-          `}
-        </style>
-        <div style={{ fontSize: "1.2rem", color: "#555" }}>Loading...</div>
+      <div style={{ textAlign: "center", margin: "2rem", color: "#f76c8a" }}>
+        Error: {error}
       </div>
     );
   }
@@ -60,7 +27,7 @@ export default function AnimePage() {
     <section className="anime-section">
       <h1 className="anime-title">My Best Top 3 Anime Movies</h1>
       <div className="anime-list">
-        {animeMoviesList.map((anime) => (
+        {animeMovies.map((anime) => (
           <div className="anime-card-flip" key={anime.title}>
             <div className="anime-card-inner">
               <div className="anime-card-front">

@@ -1,13 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
-
-type Anime = {
-  title: string;
-  image: string;
-  description: string;
-  sourceUrl: string;
-};
+import { useAppDispatch, useAppSelector } from "../../lib/hooks";
+import { fetchAnimeList, fetchAnimeData, type Anime } from "../../lib/features/animeSlice";
 
 function AnimeCard({ anime }: { anime: Anime }) {
   return (
@@ -69,26 +64,13 @@ function AnimeListItem({ anime, idx }: { anime: Anime; idx: number }) {
 }
 
 export default function AnimePage() {
-  const [animeList, setAnimeList] = useState<Anime[]>([]);
-  const [animeData, setAnimeData] = useState<Anime[]>([]);
-  const [loading, setLoading] = useState(true);
+  const dispatch = useAppDispatch();
+  const { animeList, animeData, loading, error } = useAppSelector((state) => state.anime);
 
   useEffect(() => {
-    Promise.all([
-      fetch("https://animespot-backend.onrender.com/anime/animelist").then((res) => res.json()),
-      fetch("https://animespot-backend.onrender.com/anime/animedata").then((res) => res.json()),
-    ])
-      .then(([list, data]) => {
-        setAnimeList(list);
-        setAnimeData(data);
-      })
-      .catch(() => {
-        setAnimeList([]);
-        setAnimeData([]);
-      })
-      .finally(() => setLoading(false));
-  }, []);
-
+    dispatch(fetchAnimeList());
+    dispatch(fetchAnimeData());
+  }, [dispatch]);
   if (loading) {
     return (
       <div
@@ -120,6 +102,14 @@ export default function AnimePage() {
           `}
         </style>
         <div style={{ fontSize: "1.2rem", color: "#555" }}>Loading...</div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div style={{ textAlign: "center", margin: "2rem", color: "#f76c8a" }}>
+        Error: {error}
       </div>
     );
   }

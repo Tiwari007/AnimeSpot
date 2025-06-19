@@ -3,6 +3,7 @@ import { Risque } from "next/font/google";
 import './globals.css';
 import "../styles/_feature_all.scss";
 import Navbar from "../components/navbar";
+import { ReduxProvider } from "../components/ReduxProvider";
 
 const risque = Risque({
   subsets: ['latin'],
@@ -23,8 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${risque.variable} antialiased`}>
-        <Navbar />
-        <main>{children}</main>
+        <ReduxProvider>
+          <Navbar />
+          <main>{children}</main>
+        </ReduxProvider>
       </body>
     </html>
   );

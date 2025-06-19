@@ -53,7 +53,28 @@
   margin-top: 2rem;
 }
 
+.animeSuggestionForm input[type="email"] {
+  padding: 1.2rem 2rem;
+  border-radius: 16px;
+  border: 2px solid #f76c8a;
+  font-size: 1.5rem;
+  outline: none;
+  min-width: 350px;
+  max-width: 100%;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(247, 108, 138, 0.08);
+  padding: 10px;
+  margin-top: 1rem;
+}
+
 .animeSuggestionForm input[type="text"]:focus {
+  border-color: #d94f6d;
+  background: #fff0f6;
+  box-shadow: 0 4px 16px rgba(247, 108, 138, 0.15);
+}
+
+.animeSuggestionForm input[type="email"]:focus {
   border-color: #d94f6d;
   background: #fff0f6;
   box-shadow: 0 4px 16px rgba(247, 108, 138, 0.15);
@@ -83,8 +104,11 @@
   }
   .animeSuggestion h1 {
     font-size: 1.6rem;
+  }  .animeSuggestionForm input[type="text"] {
+    min-width: 90vw;
+    font-size: 1.1rem;
   }
-  .animeSuggestionForm input[type="text"] {
+  .animeSuggestionForm input[type="email"] {
     min-width: 90vw;
     font-size: 1.1rem;
   }
