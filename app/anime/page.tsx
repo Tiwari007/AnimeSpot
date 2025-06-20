@@ -16,7 +16,7 @@ function AnimeCard({ anime }: { anime: Anime }) {
     <div className="anime-card-flip" key={anime.title}>
       <div className="anime-card-inner">
         <div className="anime-card-front">
-          <Image
+          <img
             src={anime.image}
             alt={anime.title}
             width={200}
@@ -47,7 +47,7 @@ function AnimeListItem({ anime, idx }: { anime: Anime; idx: number }) {
   return (
     <li className="anime-list-item" key={anime.title}>
       <span className="anime-list-index">{idx + 1}.</span>
-      <Image
+      <img
         src={anime.image}
         alt={anime.title}
         width={60}
