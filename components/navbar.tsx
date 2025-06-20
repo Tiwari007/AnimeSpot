@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import features from '../config/features';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,11 +22,11 @@ export default function Navbar() {
       </Link>
       <div className={`links${open ? ' open' : ''}`} onClick={() => setOpen(false)}>
         <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/favouriteanime">Anime</Link>
-        <Link href="/movies">Movies</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/faq" className="faqBtn">FAQ</Link>
+        { features.showAnimeOnNavigation && <Link href="/anime">Anime</Link> }
+        { features.showAnimeMoviesOnNavigation && <Link href="/animemovies">Movies</Link> }
+        { features.showAboutOnNavigation && <Link href="/about">About</Link> }
+        { features.showContactOnNavigation && <Link href="/contact">Contact</Link> }
+        { features.showFaqOnNavigation && <Link href="/faq" className="faqBtn">FAQ</Link> }
       </div>
     </nav>
   );

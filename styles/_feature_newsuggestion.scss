@@ -6,14 +6,14 @@
   align-items: center;
   justify-content: center;
   padding: 4rem 1rem;
-  background: #ffe0ea9a;
+  background: #d0bdc386;
   border-radius: 32px;
   margin: 3rem auto;
   max-width: 80%;
 }
 
 .animeSuggestion h1 {
-  color: #f76c8a;
+  // color: #f76c8a;
   font-size: 3rem;
   font-family: 'Risque', sans-serif;
   text-align: center;
@@ -33,7 +33,7 @@
 
 .animeSuggestionForm label {
   font-size: 2.5rem;
-  color: #ffffff;
+  color: #ffffffa6;
   font-weight: 500;
   margin-bottom: 0.8rem;
 }
@@ -41,12 +41,12 @@
 .animeSuggestionForm input[type="text"] {
   padding: 1.2rem 2rem;
   border-radius: 16px;
-  border: 2px solid #f76c8a;
+  border: 2px solid #402424;
   font-size: 1.5rem;
   outline: none;
   min-width: 350px;
   max-width: 100%;
-  background: #fff;
+  background: #ffffffa6;
   transition: border-color 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px rgba(247, 108, 138, 0.08);
   padding: 10px;
@@ -55,7 +55,7 @@
 
 .animeSuggestionForm input[type="text"]:focus {
   border-color: #d94f6d;
-  background: #fff0f6;
+  background: #ffffffa6;
   box-shadow: 0 4px 16px rgba(247, 108, 138, 0.15);
 }
 
@@ -74,6 +74,10 @@
 
 .animeSuggestionForm .exploreBtn:hover {
   background: #d94f6d;
+}
+
+textarea {
+  background-color: #ffffffa6;
 }
 
 @media (max-width: 700px) {
